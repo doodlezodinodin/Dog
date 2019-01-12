@@ -1,4 +1,4 @@
-package ua.nure.dog.one;
+package ua.nure.dog.game;
 
 public class Dog {
 
