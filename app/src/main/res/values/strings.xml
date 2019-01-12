@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dog</string>
+
+    <string name="stats">stats img</string>
+
+    <string name="main_image">main image</string>
+
+    <string name="hint_nameDog">Name</string>
+
+    <string name="initialTv">HI, Sofi. What name will you give me?</string>
+    <string name="initial_image">initial image</string>
+    <string name="btn_name_ok">Ok</string>
+</resources>

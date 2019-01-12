@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stage"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:id="@+id/stats_points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="78dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imgView_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgView_statsStars"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_stars" />
+
+        <TextView
+            android:id="@+id/tv_statsStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imgView_statsDiamonds"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_diamonds" />
+
+        <TextView
+            android:id="@+id/tv_statsDiamonds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgView_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:contentDescription="@string/main_image"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nameDog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stats_points"
+        app:srcCompat="@drawable/dog_main" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="119dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nameDog">
+
+        <ImageView
+            android:id="@+id/imgView_statsFood"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_food" />
+
+        <TextView
+            android:id="@+id/tv_statsFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imgView_statsClean"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_clean" />
+
+        <TextView
+            android:id="@+id/tv_statsClean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imgView_statsNeed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_need" />
+
+        <TextView
+            android:id="@+id/tv_statsNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imgView_statsPlay"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/stats"
+            app:srcCompat="@drawable/stats_play" />
+
+        <TextView
+            android:id="@+id/tv_statsPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nameDog"
+        android:layout_width="83dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="71dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgView_main" />
+</android.support.constraint.ConstraintLayout>
