@@ -20,6 +20,13 @@ public class Stage extends AppCompatActivity {
             R.drawable.time0900, R.drawable.time1000, R.drawable.time1100
     };
 
+    private Integer[] listImageDay = {
+            R.drawable.number0, R.drawable.number1, R.drawable.number2,
+            R.drawable.number3, R.drawable.number4, R.drawable.number5,
+            R.drawable.number6, R.drawable.number7, R.drawable.number8,
+            R.drawable.number9
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +41,12 @@ public class Stage extends AppCompatActivity {
         final TextView tv_time = findViewById(R.id.tv_time);
         final ImageView imageView = findViewById(R.id.imgView_time);
 
-        final GameTime gameTime = new GameTime();
+//        final TextView tv_day = findViewById(R.id.tv_day);
+        final ImageView imgView_num0 = findViewById(R.id.imgView_num0);
+        final ImageView imgView_num1 = findViewById(R.id.imgView_num1);
+        final ImageView imgView_num2 = findViewById(R.id.imgView_num2);
+
+        final GameTime gameTime = new GameTime(123, 22, 0);
 
         final Handler handler = new Handler();
         handler.post(new Runnable(){
@@ -42,7 +54,12 @@ public class Stage extends AppCompatActivity {
             public void run() {
                 tv_time.setText(gameTime.run());
                 imageView.setImageResource(listImageTime[gameTime.getMinutes()]);
-                handler.postDelayed(this,10); // set time here to refresh textView
+
+                imgView_num0.setImageResource(listImageDay[gameTime.getDay(2)]);
+                imgView_num1.setImageResource(listImageDay[gameTime.getDay(1)]);
+                imgView_num2.setImageResource(listImageDay[gameTime.getDay(0)]);
+
+                handler.postDelayed(this,1); // set time here to refresh textView
             }
         });
     }
