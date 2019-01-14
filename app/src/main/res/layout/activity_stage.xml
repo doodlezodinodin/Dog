@@ -8,173 +8,36 @@
     tools:layout_editor_absoluteY="25dp">
 
     <ImageView
-        android:id="@+id/imgView_statsStars"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
-        android:contentDescription="@string/img_stats"
-        app:layout_constraintBottom_toTopOf="@+id/tv_statsStars"
-        app:layout_constraintEnd_toStartOf="@+id/tv_statsStars"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lineLay_days"
-        app:srcCompat="@drawable/stats_stars" />
-
-    <TextView
-        android:id="@+id/tv_statsStars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="203dp"
-        android:layout_marginRight="203dp"
-        android:layout_marginBottom="76dp"
-        android:layout_weight="1"
-        android:text="0"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgView_main"
-        app:layout_constraintEnd_toStartOf="@+id/tv_statsDiamonds"
-        app:layout_constraintStart_toEndOf="@+id/imgView_statsStars"
-        app:layout_constraintTop_toBottomOf="@+id/imgView_statsStars"
-        tools:layout_marginLeft="5dp"
-        tools:layout_marginTop="1dp" />
-
-    <ImageView
-        android:id="@+id/imgView_statsDiamonds"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:contentDescription="@string/img_stats"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_statsDiamonds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_statsDiamonds"
-        app:layout_constraintTop_toTopOf="@+id/imgView_statsStars"
-        app:srcCompat="@drawable/stats_diamonds" />
-
-    <TextView
-        android:id="@+id/tv_statsDiamonds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_weight="1"
-        android:gravity="right"
-        android:text="0"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_statsStars"
-        app:layout_constraintEnd_toStartOf="@+id/imgView_statsDiamonds"
-        app:layout_constraintStart_toEndOf="@+id/tv_statsStars"
-        app:layout_constraintTop_toTopOf="@+id/tv_statsStars"
-        tools:layout_marginLeft="5dp"
-        tools:layout_marginTop="1dp" />
-
-    <ImageView
         android:id="@+id/imgView_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:contentDescription="@string/img_main"
-        app:layout_constraintBottom_toTopOf="@+id/tv_nameDog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_statsStars"
+        app:layout_constraintBottom_toBottomOf="@+id/line_btn"
+        app:layout_constraintEnd_toStartOf="@+id/tv_nameDog"
+        app:layout_constraintStart_toStartOf="@+id/tv_nameDog"
         app:srcCompat="@drawable/dog_main" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="66dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/lineLay_time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nameDog">
-
-        <ImageView
-            android:id="@+id/imgView_statsFood"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:contentDescription="@string/img_stats"
-            app:srcCompat="@drawable/stats_food" />
-
-        <TextView
-            android:id="@+id/tv_statsFood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100" />
-
-        <ImageView
-            android:id="@+id/imgView_statsClean"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:contentDescription="@string/img_stats"
-            app:srcCompat="@drawable/stats_clean" />
-
-        <TextView
-            android:id="@+id/tv_statsClean"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100" />
-
-        <ImageView
-            android:id="@+id/imgView_statsNeed"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:contentDescription="@string/img_stats"
-            app:srcCompat="@drawable/stats_need" />
-
-        <TextView
-            android:id="@+id/tv_statsNeed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100" />
-
-        <ImageView
-            android:id="@+id/imgView_statsPlay"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:contentDescription="@string/img_stats"
-            app:srcCompat="@drawable/stats_play" />
-
-        <TextView
-            android:id="@+id/tv_statsPlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="100" />
-    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_nameDog"
-        android:layout_width="83dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgView_main" />
 
     <LinearLayout
-        android:id="@+id/lineLay_time"
+        android:id="@+id/line_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="118dp"
-        android:layout_marginRight="118dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="15dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imgView_time"
@@ -188,10 +51,10 @@
 
         <TextView
             android:id="@+id/tv_time"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="00:00"
+            android:text="@string/valTime"
             android:textSize="16sp"
             tools:layout_editor_absoluteX="163dp"
             tools:layout_editor_absoluteY="472dp"
@@ -199,13 +62,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lineLay_days"
+        android:id="@+id/line_days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="17dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/imgView_statsStars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -215,6 +76,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:contentDescription="@string/img_number"
+            android:visibility="gone"
             app:srcCompat="@drawable/number0"
             tools:layout_editor_absoluteX="119dp"
             tools:layout_editor_absoluteY="26dp" />
@@ -224,6 +86,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:contentDescription="@string/img_number"
+            android:visibility="gone"
             app:srcCompat="@drawable/number0"
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="26dp" />
@@ -245,6 +108,278 @@
             android:textSize="16sp"
             tools:layout_editor_absoluteX="186dp"
             tools:layout_editor_absoluteY="23dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_statsStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imgView_statsStars"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/img_stats"
+            app:srcCompat="@drawable/stats_stars"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/tv_statsStars"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/val"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="68dp"
+            tools:layout_marginLeft="5dp"
+            tools:layout_marginTop="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_statsDiamons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/tv_statsDiamonds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/val"
+            android:textSize="17sp"
+            tools:ignore="RtlHardcoded"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="68dp"
+            tools:layout_marginLeft="5dp"
+            tools:layout_marginTop="1dp" />
+
+        <ImageView
+            android:id="@+id/imgView_statsDiamonds"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/img_stats"
+            app:srcCompat="@drawable/stats_diamonds"
+            tools:layout_editor_absoluteX="184dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="154dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/line_stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imgBtn_skins"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/skin"
+            android:contentDescription="@string/imgBtn"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="86dp" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_games"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/games"
+            android:contentDescription="@string/imgBtn"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_lockClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/lock_close"
+            android:contentDescription="@string/imgBtn"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="86dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/line_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/line_statsLife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="355dp">
+
+            <ImageView
+                android:id="@+id/imgView_statsLife"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/img_stats"
+                app:srcCompat="@drawable/stats_life"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_editor_absoluteY="401dp" />
+
+            <TextView
+                android:id="@+id/tv_statsLife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/val"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="400dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_statsFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="355dp">
+
+            <ImageView
+                android:id="@+id/imgView_statsFood"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/img_stats"
+                app:srcCompat="@drawable/stats_food"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="54dp" />
+
+            <TextView
+                android:id="@+id/tv_statsFood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/val"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="65dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_statsSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="355dp">
+
+            <ImageView
+                android:id="@+id/imgView_statsSleep"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/img_stats"
+                app:srcCompat="@drawable/stats_sleep"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="403dp" />
+
+            <TextView
+                android:id="@+id/tv_statsSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/val"
+                tools:layout_editor_absoluteX="113dp"
+                tools:layout_editor_absoluteY="402dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_statsClean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables"
+            tools:layout_editor_absoluteX="193dp"
+            tools:layout_editor_absoluteY="355dp">
+
+            <ImageView
+                android:id="@+id/imgView_statsClean"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/img_stats"
+                app:srcCompat="@drawable/stats_clean"
+                tools:layout_editor_absoluteX="229dp"
+                tools:layout_editor_absoluteY="148dp" />
+
+            <TextView
+                android:id="@+id/tv_statsClean"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/val"
+                tools:layout_editor_absoluteX="259dp"
+                tools:layout_editor_absoluteY="148dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_statsNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables"
+            tools:layout_editor_absoluteX="250dp"
+            tools:layout_editor_absoluteY="354dp">
+
+            <ImageView
+                android:id="@+id/imgView_statsNeed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/img_stats"
+                app:srcCompat="@drawable/stats_need"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="137dp" />
+
+            <TextView
+                android:id="@+id/tv_statsNeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/val"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="149dp" />
+        </LinearLayout>
     </LinearLayout>
 
 

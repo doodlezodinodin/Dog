@@ -7,18 +7,23 @@ public class Dog {
     private int stars;
     private int diamonds;
 
+    private int life;
     private int food;
+    private int sleep;
     private int clean;
     private int need;
-    private int play;
 
     public Dog(String name) {
         this.name = name;
 
+        stars = 10;
+        diamonds = 1;
+
+        life = 100;
         food = 100;
+        sleep = 100;
         clean = 100;
         need = 100;
-        play = 100;
     }
 
     public String getName() {
@@ -45,12 +50,28 @@ public class Dog {
         this.diamonds = diamonds;
     }
 
+    public int getLife() {
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
     public int getFood() {
         return food;
     }
 
     public void setFood(int food) {
         this.food = food;
+    }
+
+    public int getSleep() {
+        return sleep;
+    }
+
+    public void setSleep(int sleep) {
+        this.sleep = sleep;
     }
 
     public int getClean() {
@@ -67,13 +88,5 @@ public class Dog {
 
     public void setNeed(int need) {
         this.need = need;
-    }
-
-    public int getPlay() {
-        return play;
-    }
-
-    public void setPlay(int play) {
-        this.play = play;
     }
 }

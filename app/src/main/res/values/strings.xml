@@ -2,7 +2,7 @@
     <string name="app_name">Dog</string>
 
     <string name="tv_hintNameDog">Name</string>
-    <string name="tv_day">Day</string>
+    <string name="tv_day">День</string>
     <string name="tv_initial">HI, Sofi. What name will you give me?</string>
 
     <string name="btn_name_ok">OK</string>
@@ -12,4 +12,10 @@
     <string name="img_main">main image</string>
     <string name="img_time">time image</string>
     <string name="img_number">number image</string>
+
+    <string name="imgBtn">button image</string>
+
+    <string name="val">100</string>
+    <string name="valTime">00:00</string>
+
 </resources>

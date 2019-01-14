@@ -19,65 +19,99 @@ public class GameTime {
 
     }
 
-    public String run() {
-        incTime();
+    public String runTime() {
+        increaseSecond();
         return getStringTime();
     }
 
-    private void incTime() {
-        if (seconds == 59) {
-            seconds = 0;
+    //***** inc
 
-            if (minutes == 23) {
-                minutes = 0;
-                day++;
-            } else {
-                minutes++;
-            }
+    private void increaseSecond() {
+        if (seconds >= 59) {
+            seconds = -1;
+            increaseMinute();
         }
-        seconds++;
+        seconds+=10;
     }
 
-    private String getStringTime() {
-        return numberAdjustment(minutes) + ":" + numberAdjustment(seconds);
+    private void increaseMinute() {
+        if (minutes >= 23) {
+            minutes = -1;
+            increaseDay();
+        }
+        minutes++;
     }
 
-    private String numberAdjustment(int num) {
+    private void increaseDay() {
+        day++;
+    }
+
+    //***** add
+
+    private String addZeroToStringTime(int num) {
         if (num < 10) {
             return "0" + String.valueOf(num);
         }
         return String.valueOf(num);
     }
 
-    public int getMinutes() {
+    private String addZeroBeforeTheDay(int i) {
+        StringBuffer stringBuffer = new StringBuffer(String.valueOf(i)).reverse();
+        while (stringBuffer.length() < 3) {
+            stringBuffer.append("0");
+        }
+        return stringBuffer.reverse().toString();
+    }
+
+    //***** get
+
+    private String getStringTime() {
+        return addZeroToStringTime(minutes) + ":" + addZeroToStringTime(seconds);
+    }
+
+    public int getDayPart(int i) {
+        switch (i) {
+            case (0):
+                return Character.getNumericValue(addZeroBeforeTheDay(day).charAt(i));
+            case (1):
+                return Character.getNumericValue(addZeroBeforeTheDay(day).charAt(i));
+            case (2):
+                return Character.getNumericValue(addZeroBeforeTheDay(day).charAt(i));
+            default:
+                return 0;
+        }
+    }
+
+    public int getMinuteIn12hourFormat() {
         if (minutes > 11) {
             return (minutes - 12);
         }
         return (minutes);
     }
 
-    public int getDay(int i) {
-//        String s = addZeroBeforeTheNumber(day);
-//        char a = s.charAt(0);
-//        int b = Character.getNumericValue(a);
+    //***** getter and setter
 
-        switch (i) {
-            case (0):
-                return Character.getNumericValue(addZeroBeforeTheNumber(day).charAt(i));
-            case (1):
-                return Character.getNumericValue(addZeroBeforeTheNumber(day).charAt(i));
-            case (2):
-                return Character.getNumericValue(addZeroBeforeTheNumber(day).charAt(i));
-            default:
-                return 0;
-        }
+    public int getSeconds() {
+        return seconds;
     }
 
-    private String addZeroBeforeTheNumber(int i) {
-        StringBuffer stringBuffer = new StringBuffer(String.valueOf(i)).reverse();
-        while (stringBuffer.length() < 3) {
-            stringBuffer.append("0");
-        }
-        return stringBuffer.reverse().toString();
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
     }
 }

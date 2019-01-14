@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(".Stage");
                         intent.putExtra("nameDog", nameDog.getText().toString());
                         startActivity(intent);
+                        finish();
                     }
                 }
         );
